@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📋 To do list</h1>
+      <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <section class="input-group">
+      <input type="text" id="taskInput" placeholder="What do you need to do?" />
+      <button onclick="addTask()">Add Task</button>
+    </section>
+
+    <section class="filter-buttons">
+      <button onclick="filterTasks('all')" id="filter-all" class="active">All</button>
+      <button onclick="filterTasks('completed')" id="filter-completed">Completed</button>
+      <button onclick="filterTasks('pending')" id="filter-pending">Pending</button>
+    </section>
+
+    <ul id="taskList" class="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
